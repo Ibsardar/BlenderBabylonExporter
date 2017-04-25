@@ -1,0 +1,483 @@
+/* ================================= *
+ * By:              Ibrahim Sardar   *
+ * Filename:        "style.css"      *
+ * Date Created:    4/18/2017        *
+ * ================================= */
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+    margin              :   0px;
+}
+
+textarea.note {
+    resize              :   none;
+    padding             :   16px;
+    border              :   8px solid #bbb;
+    display             :   block;
+    font-size           :   18px;
+    width               :   90%;
+    height              :   350px;
+
+    -o-transition       :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -ms-transition      :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -moz-transition     :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    transition          :   color .1s ease-out, background .2s ease-in, border .2s ease-in;
+}
+
+textarea.note:hover {
+    background-color    :   #bbb;
+    color               :   #ddd;
+}
+
+textarea.note:focus {
+    background-color    :   #999;
+    color               :   #fff;
+    border-color        :   #999;
+}
+
+textarea.note-title {
+    display             :   block;
+    color               :   #434343;
+    text-align          :   center;
+    font-weight         :   bold;
+    font-size           :   32px;
+    background-color    :   #999;
+    font-family         :   Montserrat;
+    width               :   100%;
+    height              :   42px;
+    resize              :   none;
+    border              :   2px solid #999;
+
+    -o-transition       :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -ms-transition      :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -moz-transition     :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    transition          :   color .1s ease-out, background .2s ease-in, border .2s ease-in;
+}
+
+textarea.note-title:hover {
+    background-color    :   #bbb;
+    color               :   #ddd;
+    border-color        :   #bbb;
+}
+
+textarea.note-title:focus {
+    background-color    :   #ddd;
+    color               :   #999;
+    border-color        :   #434343;
+}
+
+.note-container {
+    display             :   inline-block;
+    padding             :   24px;
+}
+
+.notes-container {
+    display             :   block;
+    text-align          :   center;
+    position            :   relative;
+}
+
+.notes-container:after {
+    display             :   inline-block;
+    width               :   100%;
+    content             :   '';
+}
+
+.vpad1 {
+    padding-top         :   16px;
+}
+
+.hpad1 {
+    padding-left        :   16px;
+}
+
+.vpad2 {
+    padding-top         :   8px;
+}
+
+.hpad2 {
+    padding-left        :   8px;
+}
+
+/*
+   ------------------------
+        Navigation Bar
+   ------------------------
+*/
+.navbar-top {
+    z-index             :   999;
+    font-family         :   Montserrat;
+    font-weight         :   bold;
+    position            :   fixed;
+    top                 :   0;
+    width               :   100%;
+    margin              :   0;
+    padding             :   0;
+    overflow            :   hidden;
+    background-color    :   #999;
+    list-style-type     :   none;
+}
+
+.navbar-top li {
+    float               :   left;
+    padding             :   16px;
+    color               :   #bbb;
+
+    -o-transition       :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -ms-transition      :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -moz-transition     :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    transition          :   color .075s ease-out, background .5s ease-in, border .5s ease-in;
+}
+
+.navbar-top li:last-child {
+    float               :   right;
+}
+
+.navbar-top li:hover {
+    cursor              :   pointer;
+}
+
+.navbar-top li.active {
+    color               :   #fff;
+    background-color    :   #666;
+    text-shadow         :   0px 0px 15px #000;
+}
+
+.navbar-top li.active:hover {
+    color               :   #fff;
+    background-color    :   #777;
+}
+
+.navbar-top li:hover:not(.active) {
+    color               :   #666;
+    background-color    :   #ddd;
+    /*text-shadow         :   0px 0px 0px #fff;*/
+}
+
+.navbar-top li.title {
+    color               :   #ddd;
+    background-color    :   #000;
+    text-shadow         :   0px 0px 10px #000;
+
+    -o-transition       :   color .1s ease-out, background .3s ease-in, text-shadow .3s ease-in;
+    -ms-transition      :   color .1s ease-out, background .3s ease-in, text-shadow .3s ease-in;
+    -moz-transition     :   color .1s ease-out, background .3s ease-in, text-shadow .3s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .3s ease-in, text-shadow .3s ease-in;
+    transition          :   color .075s ease-out, background .5s ease-in, text-shadow .5s ease-in;
+}
+
+.navbar-top li.title:hover {
+    color               :   #fff;
+    background-color    :   #666;
+}
+
+/*
+   ------------------
+        Tool Bar
+   ------------------
+*/
+.toolbar-bottom {
+    z-index             :   999;
+    font-size           :   0px;
+    font-family         :   Montserrat;
+    font-weight         :   bold;
+    position            :   fixed;
+    margin              :   0% auto;
+    bottom              :   0;
+    left                :   0;
+    right               :   0;
+    padding             :   0;
+    overflow            :   hidden;
+    background-color    :   #ccc;
+    list-style-type     :   none;
+    text-align          :   center;
+    border-radius       :   32px 32px 0px 0px;
+    border-top          :   8px solid #999;
+    border-right        :   8px solid #999;
+    border-left         :   8px solid #999;
+
+    width               :   -webkit-fit-content;
+    width               :   -moz-fit-content;
+    width               :   fit-content;
+}
+
+.toolbar-bottom li {
+    vertical-align      :   center;
+    float               :   left;
+    padding             :   16px;
+    color               :   #333;
+    display             :   inline-block;
+
+    -o-transition       :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -ms-transition      :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -moz-transition     :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+    transition          :   color .1s ease-out, background .3s ease-in, border .3s ease-in;
+}
+
+.toolbar-bottom li:hover {
+    cursor              :   pointer;
+}
+
+.toolbar-bottom li.ignore {
+    color               :   #ddd;
+    font-size           :   28px;
+    line-height         :   32px;
+}
+
+.toolbar-bottom li.ignore:hover {
+    cursor              :   default;
+}
+
+.toolbar-bottom li:hover:not(.ignore) {
+    color               :   #666;
+    background-color    :   #ddd;
+}
+
+.toolbar-bottom li.save {
+    background-color    :   #cbe9ed;
+    -o-transition       :   color 1s ease-out, background .3s ease-in, border .3s ease-in;
+    -ms-transition      :   color 1s ease-out, background .3s ease-in, border .3s ease-in;
+    -moz-transition     :   color 1s ease-out, background .3s ease-in, border .3s ease-in;
+    -webkit-transition  :   color 1s ease-out, background .3s ease-in, border .3s ease-in;
+    transition          :   color 1s ease-out, background .3s ease-in, border .3s ease-in;
+}
+
+.toolbar-bottom li.save:before {
+    content             :   url("save.png");
+}
+
+.toolbar-bottom li.save:hover {
+    background-color    :   #0b98aa;
+}
+
+.toolbar-bottom li.save:active {
+    background-color    :   #0bbdaa;
+}
+
+.toolbar-bottom li.align-left:before {
+    content             :   url("left.png");
+}
+
+.toolbar-bottom li.align-right:before {
+    content             :   url("right.png");
+}
+
+.toolbar-bottom li.align-center:before {
+    content             :   url("center.png");
+}
+
+.toolbar-bottom li.align-just:before {
+    content             :   url("just.png");
+}
+
+.toolbar-bottom li.math {
+    border-radius       :   64px 64px 64px 64px;
+    width               :   32px;
+    height              :   32px;
+    font-size           :   28px;
+    line-height         :   32px;
+    background-color    :   #bbb;
+
+    -o-transition       :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    -ms-transition      :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    -moz-transition     :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    transition          :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+}
+
+.toolbar-bottom li.math:hover {
+    background-color    :   #fff;
+    font-size           :   38px;
+}
+
+.toolbar-bottom li.math.add:hover {
+    color               :   #0b98aa;
+}
+
+.toolbar-bottom li.math.sub:hover {
+    color               :   #0bbdaa;
+}
+
+.toolbar-bottom li.math.del:hover {
+    color               :   #b2155c;
+}
+
+/*
+   -------------------
+        Home Page
+   -------------------
+*/
+/***
+.home-login {
+    z-index             :   998;
+    font-size           :   10px;
+    font-family         :   Montserrat;
+    /*position            :   relative;
+    bottom              :   0;
+    top                 :   0;
+    right               :   0;*
+    padding-top         :   44px;
+    overflow            :   hidden;
+    background-color    :   #ccc;
+    list-style-type     :   none;
+    text-align          :   center;
+    /*width               :   20%;*
+    /*margin-left         :   0 80%;*
+}
+****/
+.home-login {
+    z-index             :   998;
+    font-size           :   8px;
+    font-family         :   Montserrat;
+    height              :   100%; /* 100% Full-height */
+    width               :   33%; /* RULE OF THIRDS */
+    position            :   fixed;
+    top                 :   0;
+    right               :   0;
+    overflow-x          :   hidden; /* Disable horizontal scroll */
+    transition          :   0.5s;
+    padding-top         :   44px;
+    background-color    :   #ccc;
+    list-style-type     :   none;
+    text-align          :   center;
+}
+
+.home-login .btn-big {
+    background-color: inherit;
+    border: 3px solid #229955;
+    color: #229955;
+    padding: 16px 32px;
+    text-decoration: none;
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.home-login .btn {
+    background-color: #999;
+    border: 3px solid #992255;
+    color: #fff;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 8px 64px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.home-login .btn-big:hover {
+    background-color: #229955;
+    color: #fff;
+}
+
+.home-login .btn:hover {
+    background-color: #992255;
+}
+
+.home-login .txt {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: inline-block;
+    color: #222;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.home-login .bottom {
+    padding-top:100px;
+    padding-bottom:50px;
+}
+
+.home-main {
+    transition: margin-right .5s;
+    margin-right: 33%;
+    font-size           :   22px;
+    font-family         :   Montserrat;
+}
+
+.home-main .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.home-main .txt {
+    padding-left: 24px;
+    padding-right: 24px;
+    display: inline-block;
+    color: #222;
+    font-size: 16px;
+    font-weight: normal;
+    width:225px;
+    background-color: #ddd;
+    padding : 12px;
+    -o-transition       :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    -ms-transition      :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    -moz-transition     :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    -webkit-transition  :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+    transition          :   color .1s ease-out, background .2s ease-in, background .6s ease-out, border .3s ease-in, font-size .03s ease-in;
+
+}
+
+.home-main .adv-1 {
+    color: #229955;
+    font-weight: bold;
+}
+.home-main .pic-1 {
+    content: url("icons/json.png");
+}
+.home-main .adv-2 {
+    color: #992255;
+    font-weight: bold;
+}
+.home-main .pic-2 {
+    content: url("icons/logic.png");
+}
+.home-main .adv-3 {
+    color: #225599;
+    font-weight: bold;
+}
+.home-main .pic-3 {
+    content: url("icons/physics.png");
+}
+
+.home-main #a1.txt {
+    border: 3px solid #229955;
+    background-color: inherit;
+}
+.home-main #a2.txt {
+    border: 3px solid #992255;
+    background-color: inherit;
+}
+.home-main #a3.txt {
+    border: 3px solid #225599;
+    background-color: inherit;
+}
+.home-main #a1.txt:hover {
+    background-color: #229955;
+    color:#fff;
+}
+.home-main #a2.txt:hover {
+    background-color: #992255;
+    color:#fff;
+}
+.home-main #a3.txt:hover {
+    background-color: #225599;
+    color:#fff;
+}
