@@ -1,6 +1,7 @@
 # BlenderBabylonExporter
 Final Group Project for Intro to 3D Gaming/Graphics
-Oficcial Page: https://github.com/Lrthayer/BlenderBabylonExporter
+
+##### Official Page: https://github.com/Lrthayer/BlenderBabylonExporter
 
 ## Summary
 An attempt in expanding Babylon's Blender export to include Blender's game logic bricks and Physics.
